@@ -27,7 +27,7 @@ pipeline {
 
     post {
         always {
-            echo 'This will alwassys run'
+            echo 'This will jjalwassys run'
         }
         success {
             echo 'This wilsl run only if successful'
