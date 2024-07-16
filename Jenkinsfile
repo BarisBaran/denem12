@@ -30,7 +30,7 @@ pipeline {
             echo 'This will alwassys run'
         }
         success {
-            echo 'This will run only if successful'
+            echo 'This wilsl run only if successful'
         }
         failure {
             echo 'This will run only if failed'
