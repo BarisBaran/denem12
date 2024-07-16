@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the project...'
+                echo 'Builoding the project...'
                 // Örneğin, bir Maven projesi inşa etmek için
                 // sh 'mvn clean install'
             }
