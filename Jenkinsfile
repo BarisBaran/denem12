@@ -1,14 +1,10 @@
 pipeline {
     agent any
 
-    environment {
-        // Ortam değişkenleri burada tanımlanabilir
-    }
-
     stages {
         stage('Build') {
             steps {
-                echo 'Builoding the project...'
+                echo 'Building the project...'
                 // Örneğin, bir Maven projesi inşa etmek için
                 // sh 'mvn clean install'
             }
@@ -22,4 +18,22 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'De
+                echo 'Deploying the application...'
+                // Örneğin, bir sunucuya dağıtmak için
+                // sh 'scp target/myapp.jar user@server:/path/to/deploy/'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'This will always run'
+        }
+        success {
+            echo 'This will run only if successful'
+        }
+        failure {
+            echo 'This will run only if failed'
+        }
+    }
+}
